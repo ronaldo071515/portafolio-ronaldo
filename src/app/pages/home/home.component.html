@@ -1,0 +1,57 @@
+<mat-card class="text-center mat-elevation-z8 animate__animated animate__fadeIn">
+    <h1>{{'Bienvenidos' | uppercase}}</h1>
+</mat-card>
+
+
+<div class="home">
+
+    <mat-card class="mat-elevation-z8 animate__animated animate__fadeIn">
+        <mat-card-header>
+            <mat-card-title>Habilidades</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            
+            <mat-list>
+                <mat-list-item *ngFor="let language of languages"
+                matTooltip="{{language.name}}"
+                matTooltipPosition="above">
+                    <mat-icon class="{{language.icon}} {{ language.style }}"></mat-icon>
+                    <mat-progress-bar mode="determinate" [value]="language.range" 
+                    class="bar" color="accent"></mat-progress-bar>
+                </mat-list-item>
+            </mat-list>
+
+        </mat-card-content>
+        <mat-card-footer>
+            <mat-progress-bar mode="buffer"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z8 animate__animated animate__fadeIn">
+        <mat-card-header>
+            <mat-card-title>Otras Herramientas</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item *ngFor="let herramienta of herramientas"
+                matTooltip="{{herramienta.name}}"
+                matTooltipPosition="above">
+                    <mat-icon class="{{herramienta.icon}} {{ herramienta.style }}"></mat-icon>
+                    <mat-progress-bar mode="determinate" [value]="herramienta.range" 
+                    class="bar" color="accent"></mat-progress-bar>
+                </mat-list-item>
+            </mat-list>
+            <mat-divider></mat-divider>
+            <mat-list>
+                <div mat-subheader>Otros Intereses</div>
+                <mat-list-item *ngFor="let interes of intereses">
+                    <mat-icon class="{{interes.icon}}"></mat-icon>
+                    <div mat-line>{{interes.name}}</div>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+        <mat-card-footer>
+            <mat-progress-bar mode="buffer"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+</div>

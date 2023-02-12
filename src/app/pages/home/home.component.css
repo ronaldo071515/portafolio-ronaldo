@@ -1,0 +1,61 @@
+.text-center {
+    text-align: center;
+}
+/* icons */
+.icon-html {
+    color: rgb(219, 130, 27);
+}
+.icon-css {
+    color: rgb(65, 84, 255);
+}
+.icon-js {
+    color: rgb(255, 238, 0);
+}
+.icon-jv {
+    color: rgb(51, 197, 255);
+}
+.icon-php {
+    color: rgb(150, 0, 250);
+}
+.icon-node {
+    color: rgb(62, 172, 95);
+}
+.icon-ang {
+    color: rgb(255, 36, 36);
+}
+.icon-sql {
+    color: rgb(67, 78, 238);
+}
+.icon-post {
+    color: rgb(241, 129, 0);
+}
+.icon-vs {
+    color: rgb(131, 148, 243);
+}
+
+/* general */
+h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Fugaz One', cursive;
+    font-weight: 400;
+    font-size: 28px;
+    color: #fff;
+}
+
+.home {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media ( min-width: 800px) {
+    .home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.bar {
+    margin: 15px;
+}
