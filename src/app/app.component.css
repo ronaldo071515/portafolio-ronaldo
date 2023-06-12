@@ -87,3 +87,34 @@ mat-divider {
     from{border-right-color: rgba(255, 255, 255, 0.75);}
     to{border-right-color: transparent;}
 }
+
+
+/* redes */
+.icon-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+  
+.icon-list li {
+    list-style: none;
+}
+.icon-list li i{
+    color: #ffffff;
+}
+
+#git:hover {
+    color: #272425;
+}
+#twi:hover {
+    color: #55acee;
+}
+#link:hover {
+    color: #3b5999;
+}
+#mail:hover {
+    color: #DB4437;
+}
