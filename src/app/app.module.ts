@@ -19,7 +19,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { SobremiComponent } from './pages/sobremi/sobremi.component';
-import { ContactoComponent } from './pages/contacto/contacto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,22 +27,22 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
     HomeComponent,
     ProyectosComponent,
     SobremiComponent,
-    ContactoComponent
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
     BrowserAnimationsModule,
+    BrowserModule,
     CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
+    HttpClientModule,
     MatButtonModule,
-    MatDividerModule,
     MatCardModule,
-    MatProgressBarModule,
+    MatDividerModule,
+    MatIconModule,
     MatListModule,
+    MatProgressBarModule,
+    MatSidenavModule,
     MatSliderModule,
+    MatToolbarModule,
     MatTooltipModule
   ],
   providers: [],

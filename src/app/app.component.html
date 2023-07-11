@@ -51,7 +51,20 @@
         </a>
       </li>
     </ul>
+    
+    <mat-divider></mat-divider>
+
+    <button 
+      mat-stroked-button 
+      class="menu-button"
+      color="accent" 
+      (click)="downloadCV()">
+      <mat-icon class="menu-icon">download</mat-icon>
+      <span>Descargar CV</span>
+    </button>
+
   </mat-sidenav>
+
 
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">

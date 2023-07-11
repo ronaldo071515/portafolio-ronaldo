@@ -4,6 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { delay, filter } from 'rxjs';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { NavigationEnd, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @UntilDestroy()
 @Component({
@@ -18,7 +19,8 @@ export class AppComponent {
 
   constructor(
     private observer: BreakpointObserver,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) {}
 
   ngAfterViewInit() {
@@ -45,6 +47,19 @@ export class AppComponent {
           this.sidenav.close();
         }
       });
+  }
+
+  downloadCV() {
+    const fileUrl = '/assets/cv_ronaldo_torres_caceres.pdf';
+    this.http.get(fileUrl, { responseType: 'blob' })
+      .subscribe((blob: Blob) => {
+        const downloadUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = 'CV-Ronaldo-Torres.pdf';
+        link.click();
+        URL.revokeObjectURL(downloadUrl);
+      })
   }
 
 }
