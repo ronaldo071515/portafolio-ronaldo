@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { SobremiComponent } from './pages/sobremi/sobremi.component';
+import { CertificatesComponent } from './pages/certificates/certificates.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
         path: 'sobre-mi',
         component: SobremiComponent
+    },
+    {
+        path: 'certificates',
+        component: CertificatesComponent
     },
     {
         path: '**',

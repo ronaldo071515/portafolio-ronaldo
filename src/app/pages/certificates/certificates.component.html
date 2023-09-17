@@ -1,0 +1,20 @@
+<mat-card class="text-center mat-elevation-z8 animate__animated animate__fadeIn">
+    <h1>{{'mis certificados' | uppercase}}</h1>
+</mat-card>
+
+<div class="certificados">
+
+    <mat-card class="mat-elevation-z8 animate__animated animate__fadeIn mascara"
+        *ngFor="let certificate of certificates">
+        <mat-card-header>
+          <mat-card-title>{{ certificate.title | uppercase }}</mat-card-title>
+        </mat-card-header>
+        <img
+          class="certificados__imagen" 
+          mat-card-image [src]="certificate.url" [alt]="certificate.alt">
+        <mat-card-content>
+          <p>Año - {{ certificate.year }}</p>
+        </mat-card-content>
+    </mat-card>
+
+</div>

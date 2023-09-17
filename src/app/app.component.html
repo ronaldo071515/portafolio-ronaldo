@@ -23,10 +23,20 @@
       <mat-icon class="menu-icon">folder</mat-icon>
       <span>Proyectos</span>
     </button>
-    <button mat-button class="menu-button" routerLink="sobre-mi">
-      <mat-icon class="menu-icon">info</mat-icon>
+    <button mat-button class="menu-button" [matMenuTriggerFor]="menu">
+      <mat-icon class="menu-icon">person</mat-icon>
       <span>Sobre mí</span>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item class="menu-button" routerLink="sobre-mi">
+        <mat-icon class="menu-icon">info</mat-icon>
+        <span>Acerca de mí</span>
+      </button>
+      <button mat-menu-item class="menu-button" routerLink="certificates">
+        <mat-icon class="menu-icon">verified user</mat-icon>
+        <span>Certificados</span>
+      </button>
+    </mat-menu>
 
     <mat-divider></mat-divider>
     <ul class="icon-list">
