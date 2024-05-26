@@ -14,6 +14,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'portafolio';
+  year = new Date();
 
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 

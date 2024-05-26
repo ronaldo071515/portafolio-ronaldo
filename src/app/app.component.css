@@ -118,3 +118,19 @@ mat-divider {
 #mail:hover {
     color: #DB4437;
 }
+
+.footer {
+    background-color: #272425;
+}
+
+.footer__desc {
+    height: 50px;
+    padding: 10px;
+}
+
+.footer__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+}

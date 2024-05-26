@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,6 +22,11 @@ import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 import { SobremiComponent } from './pages/sobremi/sobremi.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CertificatesComponent } from './pages/certificates/certificates.component';
+
+/* modulo para la fecha local en la app */
+import localEs from '@angular/common/locales/es-CO';
+
+registerLocaleData( localEs );
 
 @NgModule({
   declarations: [
@@ -49,7 +54,9 @@ import { CertificatesComponent } from './pages/certificates/certificates.compone
     MatTooltipModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es-CO' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
