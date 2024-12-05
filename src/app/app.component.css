@@ -3,8 +3,8 @@ mat-toolbar {
 }
 
 mat-sidenav {
-    margin: 16px;
-    width: 200px;
+    margin: 10px;
+    width: auto;
     border-right: none;
     background: #696469;
     color: #fff;
@@ -23,6 +23,7 @@ mat-sidenav {
 
 mat-sidenav-container {
     height: calc(100vh - 65px);
+    overflow: hidden;
 }
 
 .avatar {

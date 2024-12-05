@@ -1,8 +1,3 @@
-<mat-card class="text-center mat-elevation-z8 animate__animated animate__fadeIn">
-    <h1>{{'Bienvenidos' | uppercase}}</h1>
-</mat-card>
-
-
 <div class="home">
 
     <mat-card class="mat-elevation-z8 animate__animated animate__fadeIn">
@@ -10,14 +5,13 @@
             <mat-card-title>Habilidades</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            
+
             <mat-list>
-                <mat-list-item *ngFor="let language of languages"
-                matTooltip="{{language.name}}"
-                matTooltipPosition="above">
+                <mat-list-item *ngFor="let language of languages" matTooltip="{{language.name}}"
+                    matTooltipPosition="above">
                     <mat-icon class="{{language.icon}} {{ language.style }}"></mat-icon>
-                    <mat-progress-bar mode="determinate" [value]="language.range" 
-                    class="bar" color="accent"></mat-progress-bar>
+                    <mat-progress-bar mode="determinate" [value]="language.range" class="bar"
+                        color="accent"></mat-progress-bar>
                 </mat-list-item>
             </mat-list>
 
@@ -33,12 +27,11 @@
         </mat-card-header>
         <mat-card-content>
             <mat-list>
-                <mat-list-item *ngFor="let herramienta of herramientas"
-                matTooltip="{{herramienta.name}}"
-                matTooltipPosition="above">
+                <mat-list-item *ngFor="let herramienta of herramientas" matTooltip="{{herramienta.name}}"
+                    matTooltipPosition="above">
                     <mat-icon class="{{herramienta.icon}} {{ herramienta.style }}"></mat-icon>
-                    <mat-progress-bar mode="determinate" [value]="herramienta.range" 
-                    class="bar" color="accent"></mat-progress-bar>
+                    <mat-progress-bar mode="determinate" [value]="herramienta.range" class="bar"
+                        color="accent"></mat-progress-bar>
                 </mat-list-item>
             </mat-list>
             <mat-divider></mat-divider>

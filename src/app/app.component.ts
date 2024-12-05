@@ -51,7 +51,7 @@ export class AppComponent {
   }
 
   downloadCV() {
-    const fileUrl = '/assets/cv_ronaldo_torres_caceres.pdf';
+    const fileUrl = '/assets/cv_ronaldotorrescaceres.pdf';
     this.http.get(fileUrl, { responseType: 'blob' })
       .subscribe((blob: Blob) => {
         const downloadUrl = URL.createObjectURL(blob);
